@@ -1,0 +1,74 @@
+
+
+.body{
+  background-color: #FFFFFF;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+
+}
+
+.tasks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #F4512C;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+
+.dateTime{
+  display: flex;
+  justify-content: space-between;
+  color: #808080;
+}
+
+.doneText {
+  color: #14B7A0 !important;
+  font-size: large;
+}
+
+.edit {
+  color: #F4512C;
+  border: none !important;
+  border-radius: 8px;
+  background-color: #5E1B89 !important;
+}
+
+.edit:hover{
+  color: #5E1B89 !important;
+  background-color: #F4512C !important;
+}
+
+.delete{
+  color: #F4512C;
+  border: none !important;
+  border-radius: 8px;
+  background-color: #5E1B89 !important;
+  margin-left: 10px;
+}
+
+.delete:hover{
+  color: #5E1B89 !important;
+  background-color: #F4512C !important;
+}
+
+.cncl {
+  background-color: #333333;
+  border: none;
+}
+
+.cncl:hover {
+  background-color: #808080;
+}
+
+.save {
+  background-color: #F4512C !important;
+  border: none;
+}
+
+.save:hover {
+  background-color: #FF7F4D !important;
+}

@@ -1,0 +1,50 @@
+.logo {
+  width: 45px;
+  height: auto;
+  display: flex;
+  margin-right: 20px;
+}
+
+.header {
+  color: #5E1B89; 
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: #F8F9FA;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  margin-bottom: 0;
+  font-weight: bolder;
+  display: flex;
+}
+
+.header form {
+  margin-top: 1rem;
+}
+
+.header input {
+  border-color: black;
+  background-color: #FFFFFF;
+}
+
+.header input:focus {
+  border-color: black; 
+  background-color: #FFFFFF;
+}
+
+.addTask{
+  background-color: #5E1B89 !important;
+  border: none !important;
+}
+
+.addTask:hover{
+  background-color: #F4512C !important;
+  border: none;
+}

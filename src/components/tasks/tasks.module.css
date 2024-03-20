@@ -1,0 +1,58 @@
+
+/* tasks.module.css */
+.container {
+  width: 100%;
+  max-width: 1140px; /* Adjust the max-width based on your layout */
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: #F8F9FA;
+}
+
+.text-purple {
+  color: #5E1B89 !important;
+}
+
+.doneAll{
+  color: #FAFAFA;
+  background-color: #5E1B89 !important;
+  border: none;
+}
+
+.doneAll:hover{
+  background-color: #F4512C !important;
+}
+
+.deleteAll{
+  color: #FAFAFA;
+  background-color: #5E1B89 !important;
+  border: none;
+  margin-left: 10px;
+}
+
+.deleteAll:hover{
+  background-color: #F4512C !important;
+}
+
+.undoneAll{
+  color: #FAFAFA;
+  background-color: #5E1B89 !important;
+  border: none;
+}
+
+.undoneAll:hover{
+  background-color: #F4512C !important;
+}
+
+.deleteAll2{
+  color: #FAFAFA;
+  background-color: #5E1B89 !important;
+  border: none;
+  margin-left: 10px;
+  }
+  
+  .deleteAll2:hover{
+    background-color: #F4512C !important;
+  }
