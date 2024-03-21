@@ -13,8 +13,8 @@ export function Tasks({ tasks, completedTasks, onUnclick, onComplete, onDelete, 
   const OverallQuantity = tasks.length + completedTasks.length;
   const completeTasks = completedTasks.length;
 
-  const [showDeleteOngoingConfirmation, setShowDeleteOngoingConfirmation] = useState(false); // State for delete confirmation modal for ongoing tasks
-  const [showDeleteCompletedConfirmation, setShowDeleteCompletedConfirmation] = useState(false); // State for delete confirmation modal for completed tasks
+  const [showDeleteOngoingConfirmation, setShowDeleteOngoingConfirmation] = useState(false);
+  const [showDeleteCompletedConfirmation, setShowDeleteCompletedConfirmation] = useState(false); 
 
   const handleDeleteAllOngoingTasks = () => {
     setShowDeleteOngoingConfirmation(true);
@@ -26,17 +26,17 @@ export function Tasks({ tasks, completedTasks, onUnclick, onComplete, onDelete, 
 
   const handleDeleteConfirm = () => {
     onDeleteAllCompleted();
-    setShowDeleteCompletedConfirmation(false); // Close the confirmation modal for completed tasks
+    setShowDeleteCompletedConfirmation(false); 
   };
 
   const handleDeleteConfirm2 = () => {
     onDeleteAllOngoingTasks(); 
-    setShowDeleteOngoingConfirmation(false); // Close the confirmation modal for ongoing tasks
+    setShowDeleteOngoingConfirmation(false); 
   }
 
   const handleDeleteCancel = () => {
-    setShowDeleteOngoingConfirmation(false); // Close the confirmation modal for ongoing tasks if cancel is clicked
-    setShowDeleteCompletedConfirmation(false); // Close the confirmation modal for completed tasks if cancel is clicked
+    setShowDeleteOngoingConfirmation(false); 
+    setShowDeleteCompletedConfirmation(false); 
   };
 
   return (
@@ -75,7 +75,6 @@ export function Tasks({ tasks, completedTasks, onUnclick, onComplete, onDelete, 
         </div>
       </div>
 
-      {/* Confirmation modal for delete all ongoing tasks */}
       <ConfirmationModal
         show={showDeleteOngoingConfirmation}
         onHide={() => setShowDeleteOngoingConfirmation(false)}
@@ -83,7 +82,6 @@ export function Tasks({ tasks, completedTasks, onUnclick, onComplete, onDelete, 
         onCancel={handleDeleteCancel}
       />
 
-      {/* Confirmation modal for delete all completed tasks */}
       <ConfirmationModal
         show={showDeleteCompletedConfirmation}
         onHide={() => setShowDeleteCompletedConfirmation(false)}

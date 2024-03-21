@@ -18,6 +18,11 @@
   background-color: #FFFFFF;
 }
 
+.taskDetails {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
 
 .dateTime{
   display: flex;

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Header } from './components/header';
 import { Tasks } from './components/tasks';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/body/body.css';
 
 const LOCAL_STORAGE_KEY = 'todo:savedTasks';
 const COMPLETED_STORAGE_KEY = 'todo:completedTasks';

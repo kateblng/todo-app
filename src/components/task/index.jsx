@@ -22,12 +22,12 @@ export function Task({ task, onComplete, onUnclick, onDelete, onSave }) {
 
     const handleToggleComplete = () => {
         if (task.isCompleted) {
-            onUnclick(task.id); // If the task is completed, unclick it
+            onUnclick(task.id); 
             setCompletedAt('');
         } else {
-            onComplete(task.id); // If the task is ongoing, complete it
-            const currentDate = new Date().toLocaleString(); // Get the current date and time
-            setCompletedAt(currentDate); // Update completedAt with the current date and time
+            onComplete(task.id);
+            const currentDate = new Date().toLocaleString(); 
+            setCompletedAt(currentDate); 
         }
     };
     
@@ -35,16 +35,16 @@ export function Task({ task, onComplete, onUnclick, onDelete, onSave }) {
     const handleSave = () => {
         setEditMode(false);
         
-        // Check if the edited title is not blank
+
         if (editedTitle.trim() === '') {
             setShowAlert(true);
-            return; // Stop execution here
+            return;
         }
 
-        // Check if any changes were made
+
         if (editedTitle !== task.title || status !== task.status || editedDescription !== task.description) {
             const updatedTask = { ...task, title: editedTitle, description: editedDescription, status: status };
-            onSave(updatedTask); // Call onSave function with updated task
+            onSave(updatedTask);
         }
     };
 
@@ -94,7 +94,7 @@ export function Task({ task, onComplete, onUnclick, onDelete, onSave }) {
                         ) : (
                         <FaRegSquare size={30} color={iconColor} onClick={handleToggleComplete} />
                     )}
-                    <div>
+                    <div className={styles.taskDetails}>
                         <div>
                             {editMode ? (
                                 <input
@@ -129,7 +129,7 @@ export function Task({ task, onComplete, onUnclick, onDelete, onSave }) {
                         {task.isCompleted ? `Completed at: ${completedAt}` : `Created at: ${createdAtString}`}
                     </small>
                     <div>
-                        {!task.isCompleted && ( // Render the edit button only if the task is not completed
+                        {!task.isCompleted && ( 
                             <Button className={styles.edit} onClick={handleEdit}><AiFillEdit size={20} /></Button>
                         )}
                         <Button className={styles.delete} onClick={handleDeleteClick}><AiFillDelete size={20} /></Button>
@@ -137,7 +137,6 @@ export function Task({ task, onComplete, onUnclick, onDelete, onSave }) {
                 </div>
             </div>
 
-            {/* Modal for editing title */}
             <Modal show={editMode} onHide={handleCancel}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit Task</Modal.Title>
@@ -183,7 +182,6 @@ export function Task({ task, onComplete, onUnclick, onDelete, onSave }) {
                     </Modal.Footer>
                 </Modal>
 
-            {/* Confirmation modal for delete */}
             <ConfirmationModal
                 show={showConfirmation}
                 onHide={() => setShowConfirmation(false)}
